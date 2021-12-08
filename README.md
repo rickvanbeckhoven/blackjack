@@ -1,3 +1,3 @@
 # blackjack
 
-test123
+Simpele blackjack game in python.
