@@ -11,6 +11,18 @@ def deal(deck):
         if card == 11:card = "B"
         if card == 12:card = "V"
         if card == 13:card = "K"
+        if card == 14:card = "A"
         hand.append(card)
     return hand
 
+def total(hand):
+    total = 0
+    for card in hand:
+        if card is "B" or card is "V" or card is "K":
+            total += 10
+        elif card is "A":
+            if total >= 10:
+                total += 1
+            else: total += 11
+        else: total += card
+    return total
